@@ -2,7 +2,7 @@
 This top-level file contains the root of the kriswrightdev application.
 """
 
-from bottle import default_app, route
+from bottle import default_app, route, run
 
 @route('/')
 def hello_world():
@@ -10,3 +10,5 @@ def hello_world():
 
 application = default_app()
 
+if __name__ == "__main__":
+    run(host='localhost', port=8080, debug=True)
